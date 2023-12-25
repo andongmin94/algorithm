@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
@@ -16,7 +17,7 @@ int main() {
 
     int k;
     cin >> k;
-    
+
     for (int i = 0; i < k; i++)
     {
         char command;
@@ -25,7 +26,7 @@ int main() {
         {
             char command2;
             cin >> command2;
-            b.insert(t,command2);
+            b.insert(t, command2);
         }
         if (command == 'L' && t != b.begin())
             --t;
@@ -33,16 +34,8 @@ int main() {
             ++t;
         if (command == 'B' && t != b.begin())
         {
-            if (t == b.end())
-            {
-                --t;
-                t = b.erase(t);
-            }
-            else
-            {
-                --t;
-                t = b.erase(t);
-            }
+            --t;
+            t = b.erase(t);
         }
     }
     for (auto e : b)
