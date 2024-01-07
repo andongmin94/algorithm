@@ -40,7 +40,6 @@ int main()
                 stack.pop();
             }
         }
-
         if (isValid == true && stack.empty())
             cout << "yes" << '\n';
         else cout << "no" << '\n';
