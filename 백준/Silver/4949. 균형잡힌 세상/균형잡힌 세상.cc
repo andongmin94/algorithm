@@ -2,8 +2,6 @@
 
 using namespace std;
 
-int B[100000]={0,};
-
 int main()
 {
     ios::sync_with_stdio(false);
@@ -17,25 +15,33 @@ int main()
         if (s[0] == '.')
             break;
         
+        bool isValid = true;
+        
         for (auto e : s)
         {
             if(e == '(' || e == '[')
                 stack.push(e);
-            else if (stack.empty())
+            else if (e == ')')
             {
-                if (e == ')' || e == ']')
-                    stack.push(e);
+                if (stack.empty() || stack.top() != '(')
+                {
+                    isValid = false;
+                    break;
+                }
+                stack.pop();
             }
-            else if(!(stack.empty()))
+            else if (e == ']')
             {
-                if((e == ')' && stack.top() == '(') || (e == ']' && stack.top() == '['))
-                    stack.pop();
-                else if (e == ')' || e == ']')
-                    stack.push(e);
+                if (stack.empty() || stack.top() != '[')
+                {
+                    isValid = false;
+                    break;
+                }
+                stack.pop();
             }
         }
-        
-        if (stack.empty())
+
+        if (isValid == true && stack.empty())
             cout << "yes" << '\n';
         else cout << "no" << '\n';
     }
