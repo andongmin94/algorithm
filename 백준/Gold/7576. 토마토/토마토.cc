@@ -4,7 +4,6 @@ using namespace std;
 
 int board[1000][1000];
 int vis[1000][1000] = { 0, };
-string board2[1000][1000];
 
 int main()
 {
@@ -20,7 +19,6 @@ int main()
     cin >> y >> x;
 
     for (int i = 0; i < x; i++)
-    {
         for (int j = 0; j < y; j++)
         {
             cin >> board[i][j];
@@ -34,7 +32,6 @@ int main()
             if (board[i][j] == -1)
                 vis[i][j] = -1;
         }
-    }
 
     int dx[4] = { 0,1,0,-1 };
     int dy[4] = { 1,0,-1,0 };
@@ -56,14 +53,12 @@ int main()
     }
 
     for (int i = 0; i < x; i++)
-    {
         for (int j = 0; j < y; j++)
         {
             max_v = max(max_v, vis[i][j]);
             if (vis[i][j] == 0)
                 minus_one = true;
         }
-    }
 
     if (zero == true)
         cout << 0;
