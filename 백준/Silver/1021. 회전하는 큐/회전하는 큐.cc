@@ -18,7 +18,7 @@ int main()
         int v;
         cin >> v;
 
-        while (v != d.front())
+        if (v != d.front())
         {
             deque<int> t_a = d;
             deque<int> t_b = d;
@@ -40,8 +40,7 @@ int main()
             cnt += temp_a < temp_b ? temp_a : temp_b;
             d = temp_a < temp_b ? t_a : t_b;
         }
-        if (v == d.front())
-            d.pop_front();
+        if (v == d.front()) d.pop_front();
     }
     cout << cnt;
 }
