@@ -13,9 +13,10 @@ int main()
     {
         int n;
         cin >> n;
-        if (n > 4500) cout << "Case #" << i << ": Round " << 1 << '\n';
-        else if (n > 1000) cout << "Case #" << i << ": Round " << 2 << '\n';
-        else if (n > 25) cout << "Case #" << i << ": Round " << 3 << '\n';
-        else cout << "Case #" << i << ": World Finals" << '\n';
+        cout << "Case #" << i;
+        if (n > 4500) cout << ": Round " << 1 << '\n';
+        else if (n > 1000) cout << ": Round " << 2 << '\n';
+        else if (n > 25) cout << ": Round " << 3 << '\n';
+        else cout << ": World Finals" << '\n';
     }
 }
