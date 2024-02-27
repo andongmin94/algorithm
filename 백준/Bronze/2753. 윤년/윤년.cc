@@ -1,23 +1,15 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main()
 {
-    int years;
-    
-    cin >> years;
-    
-    if (years % 400 == 0)
-    {
-        cout << 1 << endl;
-    }
-    else if (years % 4 == 0 && years % 100 != 0)
-    {
-        cout << 1 << endl;
-    }
-    else
-        cout << 0 << endl;
-    
-    return 0;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int year;
+    cin >> year;
+
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) cout << 1;
+    else cout << 0;
 }
