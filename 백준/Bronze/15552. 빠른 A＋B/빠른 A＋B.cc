@@ -1,14 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main()
 {
-    int T;
-    scanf("%d", &T);
-    for(int i = 0; i < T; i++)
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while(t--)
     {
-        int A, B;
-        scanf("%d %d", &A, &B);
-        printf("%d\n", A + B);
+        int a, b;
+        cin >> a >> b;
+        cout << a + b << '\n';
     }
-    return 0;
 }
