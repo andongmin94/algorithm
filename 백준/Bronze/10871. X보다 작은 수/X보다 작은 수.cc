@@ -1,23 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int main()
-{
-    int N, X;
-    cin >> N >> X;
-    int* arr = new int[N];
-    for (int i = 0; i < N; i++)
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, x;
+    cin >> n >> x;
+
+    while(n--)
     {
-        cin >> arr[i];
+        int a;
+        cin >> a;
+        if (a < x) cout << a << ' ';
     }
-    
-    for (int j = 0; j < N; j++)
-    {
-        if (arr[j] < X)
-        {
-            cout << arr[j] << " ";
-        }
-    }
-    delete[] arr;
 }
