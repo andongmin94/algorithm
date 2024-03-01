@@ -1,16 +1,20 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main()
 {
-    int a;
-    cin >> a;
-    while (a != 0)
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    while (n)
     {
-        for (int i = 0; i < a; i++)
-            cout << "*";
-        cout << endl;
-        a--;
+        int temp = n;
+        while(temp--) cout << '*';
+        cout << '\n';
+        n--;
     }
 }
