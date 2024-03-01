@@ -10,6 +10,10 @@
 
 구현
 
+### 제출 일자
+
+2023년 9월 21일 08:59:54
+
 ### 문제 설명
 
 <p>Print out the word Hook as shown below.</p>
