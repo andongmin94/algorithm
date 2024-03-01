@@ -10,6 +10,10 @@
 
 임의 정밀도 / 큰 수 연산, 사칙연산, 수학
 
+### 제출 일자
+
+2023년 8월 29일 09:23:09
+
 ### 문제 설명
 
 <p>Julka zaskoczyła wczoraj w przedszkolu swoją wychowawczynię rozwiązując następującą zagadkę:</p>
