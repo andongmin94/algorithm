@@ -10,6 +10,10 @@
 
 사칙연산, 수학
 
+### 제출 일자
+
+2023년 10월 1일 18:22:23
+
 ### 문제 설명
 
 <p>Wyobraźmy sobie przez chwilę, że w tym roku konkurs SKI'10 składa się z <strong>n</strong> punktowanych rund i jednej rundy próbnej. Ile <a href="http://www.informatyka.wroc.pl/node/856">zgodnie z regulaminem</a> może się pojawić zadań w czasie całych zawodów?</p>
