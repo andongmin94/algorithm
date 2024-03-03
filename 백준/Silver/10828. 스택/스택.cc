@@ -31,9 +31,8 @@ int main()
 
         if (s == "size") cout << stack.size() << '\n';
 
-        if (s == "empty" && !stack.empty()) cout << 0 << '\n';
-        else if (s == "empty") cout << 1 << '\n';
-
+        if (s == "empty") cout << (stack.empty() ? 1 : 0) << '\n';
+        
         if (!stack.empty() && s == "top") cout << stack.top() << '\n';
         else if (s == "top") cout << -1 << '\n';
     }
