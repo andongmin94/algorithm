@@ -7,44 +7,34 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    stack<int> a;
     int n;
     cin >> n;
-    for (int i = 0; i < n; i++)
+    stack<int> stack;
+    while(n--)
     {
-        string x;
-        int y;
-        cin >> x;
-        if (x == "push")
+        string s;
+        cin >> s;
+
+        if (s == "push")
         {
-            cin >> y;
-            a.push(y);
+            int t;
+            cin >> t;
+            stack.push(t);
         }
-        else if (x == "top")
+
+        if (s == "pop" && !stack.empty())
         {
-            if(a.empty())
-                cout << -1 << '\n';
-            else
-                cout << a.top() << '\n';
+            cout << stack.top() << '\n';
+            stack.pop();
         }
-        else if (x == "size")
-            cout << a.size() << '\n';
-        else if (x == "pop")
-        {
-            if(a.empty())
-                cout << -1 << '\n';
-            else
-            {
-                cout << a.top() << '\n';
-                a.pop();
-            }
-        }
-        else if (x == "empty")
-        {
-            if(a.empty())
-                cout << 1 << '\n';
-            else
-                cout << 0 << '\n';
-        }
+        else if (s == "pop") cout << -1 << '\n';
+
+        if (s == "size") cout << stack.size() << '\n';
+
+        if (s == "empty" && !stack.empty()) cout << 0 << '\n';
+        else if (s == "empty") cout << 1 << '\n';
+
+        if (!stack.empty() && s == "top") cout << stack.top() << '\n';
+        else if (s == "top") cout << -1 << '\n';
     }
 }
