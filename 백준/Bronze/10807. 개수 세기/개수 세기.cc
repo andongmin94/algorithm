@@ -1,25 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main()
 {
-    int A;
-    cin >> A;
-    int* B = new int[A];
-    for (int i = 0; i < A; i++)
-    {
-        cin >> B[i];
-    }
-    int C;
-    cin >> C;
-    int D = 0;
-    for (int i = 0; i < A; i++)
-    {
-        if (B[i] == C)
-        {
-            D += 1;
-        }
-    }
-    cout << D << endl;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    for (auto& e : v)
+        cin >> e;
+    
+    int k, cnt = 0;
+    cin >> k;
+    for (auto e : v)
+        if (e == k) cnt++;
+    cout << cnt;
 }
