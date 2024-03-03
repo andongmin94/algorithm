@@ -7,20 +7,22 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int k;
-    cin >> k;
-    vector<int> a(k);
-    for (int& e : a)
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    
+    for (auto& e : v)
         cin >> e;
+    
     int x;
     cin >> x;
-    vector<int> b(x);
+    vector<int> v2(x);
     int sum = 0;
-    for (int e : a)
+    
+    for (auto e : v)
     {
-        if (x - e > 0 && b[x - e] == 1)
-            sum++;
-        else if (x - e > 0) b[e]++;
+        if (x - e > 0 && v2[x - e] == 1) sum++;
+        else if (x - e > 0) v2[e]++;
     }
-    cout << sum << '\n';
+    cout << sum;
 }
