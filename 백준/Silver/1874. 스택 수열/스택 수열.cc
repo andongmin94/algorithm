@@ -13,7 +13,7 @@ int main()
     vector<char> result;
     bool broken = false;
     int cnt = 0;
-    for (int i = 0; i < n; i++)
+    while(n--)
     {
         int num;
         cin >> num;
@@ -35,8 +35,7 @@ int main()
             break;
         }
     }
-    if (broken)
-        cout << "NO" << '\n';
+    if (broken) cout << "NO" << '\n';
     else
         for (auto e : result)
             cout << e << '\n';
