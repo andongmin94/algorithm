@@ -19,16 +19,13 @@ int main()
     {
         for(int i = 0; i < b - 1; i++)
         {
-            if (v2 == v.end())
-                v2 = v.begin();
+            if (v2 == v.end()) v2 = v.begin();
             v2++;
-            if (v2 == v.end())
-                v2 = v.begin();
+            if (v2 == v.end()) v2 = v.begin();
         }
         cout << *v2;
         v2 = v.erase(v2);
-        if(v.size() != 0)
-            cout << ", ";
+        if(v.size() != 0) cout << ", ";
     }
     cout << ">";
 }
