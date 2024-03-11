@@ -12,20 +12,18 @@ int main()
         string s;
         stack<char> stack;
         getline(cin, s);
-        if (s[0] == '.')
-            break;
+        if (s[0] == '.') break;
         
         bool isValid = true;
         
         for (auto e : s)
         {
-            if(e == '(' || e == '[')
-                stack.push(e);
+            if(e == '(' || e == '[') stack.push(e);
             else if (e == ')')
             {
                 if (stack.empty() || stack.top() != '(')
                 {
-                    isValid = false;
+                    isValid = !isValid;
                     break;
                 }
                 stack.pop();
@@ -34,14 +32,13 @@ int main()
             {
                 if (stack.empty() || stack.top() != '[')
                 {
-                    isValid = false;
+                    isValid = !isValid;
                     break;
                 }
                 stack.pop();
             }
         }
-        if (isValid == true && stack.empty())
-            cout << "yes" << '\n';
-        else cout << "no" << '\n';
+        if (isValid && stack.empty())  cout << "yes\n";
+        else cout << "no\n";
     }
 }
