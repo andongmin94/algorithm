@@ -7,24 +7,22 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N;
-    cin >> N;
-
-    int sum = 0;
-    for (int i = 0; i < N; i++)
+    int n, cnt = 0;
+    cin >> n;
+    
+    while(n--)
     {
         stack<char> stack;
-        string string;
-        cin >> string;
+        string s;
+        cin >> s;
 
-        for (auto e : string)
+        for (auto e : s)
         {
-            if (!(stack.empty()) && e == stack.top())
-                stack.pop();
+            if (!stack.empty() && e == stack.top()) stack.pop();
             else stack.push(e);
         }
-        if(stack.empty())
-            sum++;
+
+        if (stack.empty()) cnt++;
     }
-    cout << sum;
+    cout << cnt;
 }
