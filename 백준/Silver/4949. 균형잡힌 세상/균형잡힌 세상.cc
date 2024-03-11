@@ -9,36 +9,36 @@ int main()
 
     while(true)
     {
-        string s;
-        stack<char> stack;
-        getline(cin, s);
-        if (s[0] == '.') break;
+        string string;
+        stack<char> s;
+        getline(cin, string);
+        if (string[0] == '.') break;
         
         bool isValid = true;
         
-        for (auto e : s)
+        for (auto e : string)
         {
-            if(e == '(' || e == '[') stack.push(e);
+            if(e == '(' || e == '[') s.push(e);
             else if (e == ')')
             {
-                if (stack.empty() || stack.top() != '(')
+                if (s.empty() || s.top() != '(')
                 {
                     isValid = !isValid;
                     break;
                 }
-                stack.pop();
+                s.pop();
             }
             else if (e == ']')
             {
-                if (stack.empty() || stack.top() != '[')
+                if (s.empty() || s.top() != '[')
                 {
                     isValid = !isValid;
                     break;
                 }
-                stack.pop();
+                s.pop();
             }
         }
-        if (isValid && stack.empty())  cout << "yes\n";
+        if (isValid && s.empty())  cout << "yes\n";
         else cout << "no\n";
     }
 }
