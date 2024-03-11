@@ -2,40 +2,34 @@
 
 using namespace std;
 
-int B[100000]={0,};
-
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N;
-    cin >> N;
+    int n;
+    cin >> n;
 
-    for (int i = 0; i < N; i++)
+    while(n--)
     {
-        stack<char> stack;
-
+        stack<char> s;
         string string;
         cin >> string;
 
         for (auto e : string)
         {
-            if (e == '(')
-                stack.push(e);
-
-            else if (!(stack.empty()) && e == ')')
+            if (!s.empty())
             {
-                if (stack.top() == '(')
-                    stack.pop();
-                else stack.push(e);
+                if (s.top() == '(' && e == ')')
+                {
+                    s.pop();
+                    continue;
+                }
             }
-
-            else stack.push(e);
+            s.push(e);
         }
 
-        if (stack.empty())
-            cout << "YES" << '\n';
-        else cout << "NO" << '\n';
+        if (s.empty()) cout << "YES\n";
+        else cout << "NO\n";
     }
 }
