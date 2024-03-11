@@ -9,27 +9,23 @@ int main()
 
     string string;
     cin >> string;
-    stack<char> stack;
-
-    int sum = 0;
-
+    stack<char> s;
+    int cnt = 0;
+    
     for (int i = 0; i < string.size(); i++)
     {
-        if (string[i] == '(')
-            stack.push('(');
-        else if (!(stack.empty()) && string[i] == ')')
+        if (string[i] == '(') s.push('(');
+        else if (!s.empty() && string[i-1] == '(')
         {
-            if (string[i - 1] == '(')
-            {
-                stack.pop();
-                sum += stack.size();
-            }
-            else
-            {
-                stack.pop();
-                sum += 1;
-            }
+            s.pop();
+            cnt += s.size();
+        }
+        else
+        {
+            s.pop();
+            cnt += 1;
         }
     }
-    cout << sum;
+
+    cout << cnt;
 }
