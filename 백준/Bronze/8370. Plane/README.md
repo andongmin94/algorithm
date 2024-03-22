@@ -10,6 +10,10 @@
 
 사칙연산, 수학
 
+### 제출 일자
+
+2023년 8월 26일 20:30:02
+
 ### 문제 설명
 
 <p>Byteland Airlines recently extended their aircraft fleet with a new model of a plane. The new acquisition has <em>n</em><sub>1</sub> rows of seats in the business class and <em>n</em><sub>2</sub> rows in the economic class. In the business class each row contains <em>k</em><sub>1</sub> seats, while each row in the economic class has <em>k</em><sub>2</sub> seats.</p>
