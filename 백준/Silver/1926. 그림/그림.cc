@@ -2,64 +2,66 @@
 
 using namespace std;
 
-int board[502][502] = { 0, };
-int visited[502][502] = { 0, };
+int board[500][500] = {0,};
+int visited[500][500] = {0,};
 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
-    
+
     int n, m;
     cin >> n >> m;
-    int max_ = 0;
     int art = 0;
+    int max = 0;
+
+    int dx[] = {0, 1, 0, -1};
+    int dy[] = {1, 0, -1, 0};
 
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
             cin >> board[i][j];
 
-    queue<pair<int, int>> Q;
-
-    int Dx[4] = {1,0,-1,0};
-    int Dy[4] = {0,1,0,-1};
+    queue<pair<int, int>> q;
 
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++)
         {
-            int sum = 0;
-            if (board[i][j] == 1)
+            int temp = 0;
+            if (board[i][j] == 1 && visited[i][j] == 0)
             {
+                q.push({i, j});
                 art++;
-                Q.push({i,j});
+                temp++;
                 visited[i][j] = 1;
             }
-            while (!(Q.empty()))
+
+            while(!q.empty())
             {
-                pair<int, int> cur = Q.front();
-                Q.pop();
-                sum++;
+                pair<int, int> t = q.front();
+                q.pop();
+                
                 for (int k = 0; k < 4; k++)
                 {
-                    int nx = cur.first + Dx[k];
-                    int ny = cur.second + Dy[k];
-                    if (nx < 0 || nx >= n || ny < 0 || ny >= m)
-                        continue;
-                    if (board[nx][ny] != 1 || visited[nx][ny] != 0)
-                        continue;
-                    board[nx][ny] = 0;
-                    visited[nx][ny] = 1;
-                    Q.push({nx, ny});
+                    int ny = t.first + dy[k];
+                    int nx = t.second + dx[k];
+
+                    if (nx >= 0 && ny >= 0 && nx < m && ny < n)
+                    {
+                        if (board[ny][nx] == 1 && visited[ny][nx] == 0)
+                        {
+                            temp++;
+                            visited[ny][nx]++;
+                            q.push({ny, nx});
+                        }
+                    }
                 }
             }
-            if (max_ < sum)
-                max_ = sum;
+
+            if (max < temp) max = temp;
         }
     }
-    if (art != 0)
-        cout << art << '\n' << max_;
-    else
-        cout << 0 << '\n' << 0;
+
+    cout << art << '\n' << max;
 }
