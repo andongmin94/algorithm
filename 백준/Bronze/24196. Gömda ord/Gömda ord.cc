@@ -15,8 +15,8 @@ int main()
 
     while(idx < s.length())
     {
-        c = s[idx];
+        c = s[idx++];
         cout << c;
-        idx += c - 'A' + 1;
+        idx += c - 'A';
     }
 }
