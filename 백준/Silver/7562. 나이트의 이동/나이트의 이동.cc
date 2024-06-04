@@ -24,7 +24,6 @@ int main()
         int board[301][301] = {0,};
         queue<pair<int,int>> q;
         q.push({b, c});
-        board[b][c] = 0;
         
         cin >> b >> c;
         
