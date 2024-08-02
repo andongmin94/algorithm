@@ -1,10 +1,10 @@
 # [level 0] [PCCE 기출문제] 8번 / 창고 정리 - 250126 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250126) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250126?language=cpp) 
 
 ### 성능 요약
 
-메모리: 70.5 MB, 시간: 0.03 ms
+메모리: 4.19 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 02일 00:51:43
+2024년 08월 02일 18:02:35
 
 ### 문제 설명
 
