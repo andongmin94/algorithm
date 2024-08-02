@@ -1,10 +1,10 @@
 # [level 0] [PCCE 기출문제] 6번 / 가채점 - 250128 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250128) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250128?language=cpp) 
 
 ### 성능 요약
 
-메모리: 73.1 MB, 시간: 0.02 ms
+메모리: 4.21 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 02일 00:51:36
+2024년 08월 02일 17:50:12
 
 ### 문제 설명
 
