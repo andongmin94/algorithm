@@ -11,14 +11,10 @@ int main()
     getline(cin, s);
     getline(cin, k);
     int cnt = 0;
-    
-    if (s.length() < k.length()) {
-        cout << "0\n";
-        return 0;
-    }
 
     for (int i = 0; i <= s.length() - k.length(); i++)
     {
+        if (s.length() < k.length()) break;
         if (s[i] == k[0])
         {
             bool check = true;
