@@ -11,18 +11,8 @@ int main()
     getline(cin, s);
     getline(cin, k);
     int cnt = 0;
-
-    if (k.empty()) {
-        cout << "0\n";
-        return 0;
-    }
-
-    // 길이 확인 및 조정
-    int s_length = s.length();
-    int k_length = k.length();
-
-    // 문자열의 길이가 너무 짧으면 카운트가 0
-    if (s_length < k_length) {
+    
+    if (s.length() < k.length()) {
         cout << "0\n";
         return 0;
     }
