@@ -6,8 +6,8 @@ using namespace std;
 int solution(int slice, int n) {
     int answer = 0;
     //
-    if (n % slice) answer += n / slice + 1;
-    else answer += n / slice;
+    answer += n / slice;
+    if (n % slice) answer += 1;
     //
     return answer;
 }
