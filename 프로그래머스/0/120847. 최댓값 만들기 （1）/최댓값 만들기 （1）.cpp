@@ -1,25 +1,12 @@
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int solution(vector<int> numbers) {
     int answer = 0;
     //
-    int max = 0;
-    int max_idx;
-    for (int i = 0; i < numbers.size(); i++)
-    {
-        if (max < numbers[i])
-        {
-            max = numbers[i];
-            max_idx = i;
-        }
-    }
-    for (int i = 0; i < numbers.size(); i++)
-    {
-        if (i != max_idx && max * numbers[i] > answer) answer = max * numbers[i];
-    }
+    sort(numbers.begin(), numbers.end());
+    answer = numbers[numbers.size() - 2] * numbers[numbers.size() - 1];
     //
     return answer;
 }
