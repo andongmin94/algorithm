@@ -10,8 +10,8 @@ int main()
     int a, b, c, d;
     cin >> a >> b >> c >> d;
     
-    int rows = (a + (c)) / (c + 1);
-    int cols = (b + (d)) / (d + 1);
+    int rows = (a + c) / (c + 1);
+    int cols = (b + d) / (d + 1);
     
     cout << rows * cols << '\n';
 }
