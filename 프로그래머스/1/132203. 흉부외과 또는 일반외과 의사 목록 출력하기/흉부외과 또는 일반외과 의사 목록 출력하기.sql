@@ -3,7 +3,7 @@ SELECT
     DR_NAME,
     DR_ID,
     MCDP_CD,
-    DATE_FORMAT(HIRE_YMD, '%Y-%m-%d')
+    TO_CHAR(HIRE_YMD, 'YYYY-MM-DD')
 FROM
     DOCTOR
 WHERE
