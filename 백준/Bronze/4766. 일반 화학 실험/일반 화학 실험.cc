@@ -14,11 +14,8 @@ int main()
         double n;
         cin >> n;
         if (n == 999) break;
-        else
-        {
-            cout << fixed << setprecision(2);
-            cout << n - d << '\n';
-        }
+        cout << fixed << setprecision(2);
+        cout << n - d << '\n';
         d = n;
     }
 }
