@@ -9,10 +9,9 @@ int main()
     
     int t, sum;
     cin >> t >> sum;
-    int max_ = 0;
+    int max_ = sum;
     while(t--)
     {
-        if (max_ < sum) max_ = sum;
         int a, b;
         cin >> a >> b;
         sum += a;
