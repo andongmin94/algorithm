@@ -19,8 +19,13 @@ public:
 
 bool cmp(Student a, Student b)
 {
-    if (a.kor == b.kor) return a.eng < b.eng;
-    return a.kor < b.kor;
+    if (a.kor == b.kor)
+    {
+        if (a.eng == b.eng)
+            return a.mat > b.mat;
+        return a.eng > b.eng;
+    }
+    return a.kor > b.kor;
 }
 
 int main()
