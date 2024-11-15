@@ -18,7 +18,7 @@ public:
 };
 
 bool cmp(Student a, Student b) { // 총 점수 기준 오름차순 정렬
-    return a.kor + a.eng + a.math < b.kor + b.eng + b.math; 
+    return a.kor + a.eng + a.mat < b.kor + b.eng + b.mat; 
 }
 
 int main()
