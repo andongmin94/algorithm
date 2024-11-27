@@ -49,6 +49,7 @@ int main()
     for (auto e : v)
         cout << e.name << ' ' << e.height << ' ' << e.weight << '\n';
 
+    sort(v.begin(), v.end(), cmp_height);
     cout << "\nheight\n";
     for (auto e : v)
         cout << e.name << ' ' << e.height << ' ' << e.weight << '\n';
