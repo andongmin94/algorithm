@@ -26,9 +26,7 @@ int main()
         {
             if (v2[i] == v[j])
             {
-                if (!arr[j + 1]) cout << j + 1 << ' ';
-                else cout << j + 1 + 1 << ' ';
-                arr[j + 1]++;
+                cout << j + ++arr[j + 1] << ' ';
                 break;
             }
         }
