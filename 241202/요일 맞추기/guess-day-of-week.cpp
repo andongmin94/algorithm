@@ -15,11 +15,8 @@ int main() {
         two += days[i];
     two += d2;
     int k = two-one;
-    if (k < 0)
-    {
-        k %= 7;
-        k += 7;
-    }
+    k %= 7;
+    if (k < 0) k += 7;
     string weekends[] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     cout << weekends[k];
     return 0;
