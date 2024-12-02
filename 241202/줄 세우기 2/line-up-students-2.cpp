@@ -28,9 +28,9 @@ int main() {
     vector<Student> v;
     for (int i = 1; i <= n; i++)
     {
-        int a, b, c;
-        cin >> a >> b >> c;
-        v.push_back(Student(a, b, c));
+        int a, b;
+        cin >> a >> b;
+        v.push_back(Student(i, a, b));
     }
     sort(v.begin(), v.end(), cmp);
     for (auto e : v)
