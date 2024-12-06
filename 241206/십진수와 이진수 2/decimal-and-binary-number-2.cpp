@@ -21,10 +21,10 @@ int main() {
     int cnt = 0;
     while(true)
     {
-        if (n < 2) arr[cnt] = n;
-        if (n < 2) break;
+        if (sum < 2) arr[cnt] = sum;
+        if (sum < 2) break;
 
-        arr[cnt++] = n % 2;
+        arr[cnt++] = sum % 2;
         sum /= 2;
     }
     for (int i = cnt; i >= 0; i--)
