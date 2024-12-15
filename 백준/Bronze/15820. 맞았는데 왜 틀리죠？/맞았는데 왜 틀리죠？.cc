@@ -14,20 +14,25 @@ int main()
 
     while(a--)
     {
-        long q, w;
+        string q, w;
         cin >> q >> w;
-        if (q != w) sample_ = false;
+        if (q != w)
+        {
+            cout << "Wrong Answer";
+            return 0;
+        }   
     }
 
     while(b--)
     {
-        long q, w;
+        string q, w;
         cin >> q >> w;
         if (q != w) system_ = false;
+        if (q != w)
+        {
+            cout << "Why Wrong!!!";
+            return 0;
+        } 
     }
-
-    if (sample_ && system_) cout << "Accepted";
-    else if (system_) cout << "Wrong Answer";
-    else if (sample_) cout << "Why Wrong!!";
-
+    cout << "Accepted";
 }
