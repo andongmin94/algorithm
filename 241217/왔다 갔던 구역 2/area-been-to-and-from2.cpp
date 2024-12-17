@@ -22,7 +22,7 @@ int main() {
         }
         else
         {
-            for (int i = idx; i > idx - a; i--)
+            for (int i = idx - 1; i >= idx - a; i--)
             {
                 arr[i]++;
             }
