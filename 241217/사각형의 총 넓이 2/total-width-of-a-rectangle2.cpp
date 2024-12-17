@@ -15,7 +15,7 @@ int main() {
         {
             for (int j = y1; j < y2; j++)
             {
-                arr[i][j]++;
+                arr[i+100][j+100]++;
             }
         }
     }
