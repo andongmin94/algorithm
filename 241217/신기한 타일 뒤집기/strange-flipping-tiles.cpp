@@ -25,7 +25,8 @@ int main() {
         {
             for (int i = idx; i > idx - a; i--)
             arr[i] = 1;
-            idx -= a + 1;
+            idx -= a;
+            idx++;
         }
     }
     int x = 0, y = 0;
