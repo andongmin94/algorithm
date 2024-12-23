@@ -12,21 +12,19 @@ int main() {
         cin >> x1 >> y1 >> x2 >> y2;
 
         for (int i = x1; i < x2; i++)
-        {
             for (int j = y1; j < y2; j++)
-                arr[i][j] = 1;
-        }
+                arr[i+1000][j+1000] = 1;
+    
     }
     cin >> x1 >> y1 >> x2 >> y2;
     for (int i = x1; i < x2; i++)
-    {
         for (int j = y1; j < y2; j++)
-            arr[i][j] = 0;
-    }
+            arr[i+1000][j+1000] = 0;
+    
     
     int cnt = 0;
     for (auto& e : arr)
-        for (auto& e_ : e)
+        for (auto e_ : e)
                 if (e_) cnt++;
     cout << cnt;
     return 0;
