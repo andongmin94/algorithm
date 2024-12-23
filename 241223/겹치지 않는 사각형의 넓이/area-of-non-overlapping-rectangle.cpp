@@ -26,7 +26,7 @@ int main() {
     
     int cnt = 0;
     for (auto& e : arr)
-        for (auto e_ : e)
+        for (auto& e_ : e)
                 if (e_) cnt++;
     cout << cnt;
     return 0;
