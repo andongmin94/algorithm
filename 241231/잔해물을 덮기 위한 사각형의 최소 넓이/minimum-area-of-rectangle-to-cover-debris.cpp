@@ -10,8 +10,13 @@ int main() {
     a += 1000; b += 1000; c += 1000; d += 1000;
 
     for (int i = a; i < c; i++)
+    {
         for (int j = b; j < d; j++)
+        {
+            arr[i][j]++;
             cnt++;
+        }
+    }
 
     cin >> a >> b >> c >> d;
     a += 1000; b += 1000; c += 1000; d += 1000;
