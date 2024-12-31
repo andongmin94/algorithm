@@ -10,28 +10,19 @@ int main() {
     a += 1000; b += 1000; c += 1000; d += 1000;
 
     for (int i = a; i < c; i++)
-    {
         for (int j = b; j < d; j++)
-        {
-            arr[i][j]++;
-            cnt++;
-        }
-    }
+            arr[i][j] = 1;
 
     cin >> a >> b >> c >> d;
     a += 1000; b += 1000; c += 1000; d += 1000;
 
     for (int i = a; i < c; i++)
-    {
         for (int j = b; j < d; j++)
-        {
-            if (arr[i][j])
-            {
-                cnt--;
-                arr[i][j]--;
-            }
-        }
-    }
+            arr[i][j] = 2;
+
+    for (auto& e : arr)
+    for (auto& e_ : e)
+        if (e_ == 1) cnt++;
 
     cout << cnt;
     return 0;
