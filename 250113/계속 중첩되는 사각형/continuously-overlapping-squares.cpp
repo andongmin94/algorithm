@@ -22,14 +22,25 @@ int main() {
             {
                 for (int k = x1; k < x2; k++)
                 {
-                    if (!arr[j][k])
-                    {
-                        arr[j][k]++;
-                        cnt++;
-                    }
+                    arr[j][k] = 1;
                 }
             }
         }
+        else
+        {
+            for (int j = y1; j < y2; j++)
+            {
+                for (int k = x1; k < x2; k++)
+                {
+                    arr[j][k] = 0;
+                }
+            }
+        }
+    }
+    for (auto& e : arr)
+    {
+        for (auto& e_ : e)
+            if (e_) cnt++;
     }
     cout << cnt;
     return 0;
