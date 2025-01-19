@@ -12,7 +12,7 @@ int main() {
     }
 
     // Write your code here!
-    int cnt = 0; cnt_m = 0;
+    int cnt = 0, cnt_m = 0;
     for (int i = 0; i < n; i++)
     {
         if (arr[i] > t) cnt++;
