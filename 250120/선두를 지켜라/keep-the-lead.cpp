@@ -33,7 +33,7 @@ int main() {
 
     int cnt = 0;
     bool a_ = false, b_ = false;
-    for (int i = 1; i <= 1000; i++)
+    for (int i = 1; i <= a; i++)
     {
         if (!a_ && !b_)
         {
