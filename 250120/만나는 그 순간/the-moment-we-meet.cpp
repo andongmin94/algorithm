@@ -7,6 +7,8 @@ char d[1000];
 int t[1000];
 char d2[1000];
 int t2[1000];
+int a_arr[1000000] = {0,};
+int b_arr[1000000];
 
 int main() {
     cin >> n >> m;
@@ -17,11 +19,9 @@ int main() {
 
     // Write your code here!
     int a = 0;
-    int a_arr[1000] = {0,};
     int a_idx = 0;
 
     int b = 0;
-    int b_arr[1000] = {0,};
     int b_idx = 0;
 
     for (int i = 0; i < n; i++)
