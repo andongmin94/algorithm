@@ -1,79 +1,62 @@
 #include <iostream>
 
 using namespace std;
+#define MAX_T 1000000
 
 int n, m;
 char d[1000];
 int t[1000];
 char d2[1000];
 int t2[1000];
-int a_arr[1000000 + 1];
-int b_arr[1000000 + 1];
+int pos_a[MAX_T  + 1], pos_b[MAX_T + 1];
 
 int main() {
     cin >> n >> m;
 
-    for (int i = 0; i < n; i++) cin >> d[i] >> t[i];
-
-    for (int i = 0; i < m; i++) cin >> d2[i] >> t2[i];
-
     // Write your code here!
-    int a = 0;
-    int a_idx = 0;
-
-    int b = 0;
-    int b_idx = 0;
-
-    for (int i = 0; i < n; i++)
+    // A가 매 초마다 서있는 위치를 기록
+    int time_a = 1;
+    for(int i = 0; i < n; i++)
     {
-        if (d[i] == 'R')
+        char d; int t;
+        cin >> d >> t;
+        
+        while(t--)
         {
-            while (t[i]--)
-            {
-                a++;
-                a_arr[a_idx++] = a;
-            }
-        }
-        else
-        {
-            while (t[i]--)
-            {
-                a--;
-                a_arr[a_idx++] = a;
-            }
+            if(d == 'R') pos_a[time_a] = pos_a[time_a - 1] + 1;
+            else pos_a[time_a] = pos_a[time_a - 1] - 1;
+            
+            time_a++;
         }
     }
-
-    for (int i = 0; i < m; i++)
+    
+    // B가 매 초마다 서있는 위치를 기록
+    int time_b = 1;
+    for(int i = 0; i < m; i++)
     {
-        if (d2[i] == 'R')
+        char d; int t;
+        cin >> d >> t;
+        
+        while(t--)
         {
-            while (t2[i]--)
-            {
-                b++;
-                b_arr[b_idx++] = b;
-            }
-        }
-        else
-        {
-            while (t2[i]--)
-            {
-                b--;
-                b_arr[b_idx++] = b;
-            }
+            if(d == 'R') pos_b[time_b] = pos_b[time_b - 1] + 1;
+            else pos_b[time_b] = pos_b[time_b - 1] - 1;
+            
+            time_b++;
         }
     }
-
-    int idx = 0;
-    while(idx < 1000)
+    
+    // 최초로 만나는 시간을 구합니다.
+    int ans = -1;
+    for(int i = 1; i < time_a; i++)
     {
-        if (a_arr[idx] == b_arr[idx])
+        if(pos_a[i] == pos_b[i])
         {
-            cout << idx + 1;
-            return 0;
+            ans = i;
+            break;
         }
-        idx++;
     }
-    cout << -1;
+    
+    cout << ans;
     return 0;
 }
