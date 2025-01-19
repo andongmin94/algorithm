@@ -19,9 +19,11 @@ int main() {
     int a = 0;
     int a_arr[1000] = {0,};
     int a_idx = 0;
+
     int b = 0;
     int b_arr[1000] = {0,};
     int b_idx = 0;
+
     for (int i = 0; i < n; i++)
     {
         if (d[i] == 'R')
