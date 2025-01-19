@@ -16,7 +16,7 @@ int main() {
     int cnt_m = 0;
     for (int i = 0; i < N; i++)
     {
-        if (i && arr[i] == [arr[i - 1]]) cnt++;
+        if (i && arr[i] == arr[i - 1]) cnt++;
         else cnt = 1;
         if (cnt_m < cnt) cnt_m = cnt;
     }
