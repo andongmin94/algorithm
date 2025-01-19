@@ -7,8 +7,8 @@ char d[1000];
 int t[1000];
 char d2[1000];
 int t2[1000];
-int a_arr[1000000];
-int b_arr[1000000];
+int a_arr[1000000 + 1];
+int b_arr[1000000 + 1];
 
 int main() {
     cin >> n >> m;
