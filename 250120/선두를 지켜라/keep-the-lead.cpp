@@ -31,28 +31,31 @@ int main() {
         }
     }
 
-    int cnt = 0;
-    bool a_ = false, b_ = false;
-    for (int i = 1; i <= a; i++)
+    int leader = 0, ans = 0;
+    for(int i = 1; i < a; i++)
     {
-        if (!a_ && !b_)
+        if(a_arr[i] > b_arr[i])
         {
-            if (a_arr[i] > b_arr[i]) a_ = true;
-            else if (a_arr[i] < b_arr[i]) b_ = true;
+            // 기존 리더가 B였다면
+            // 답을 갱신합니다.
+            if(leader == 2)
+                ans++;
+            
+            // 리더를 A로 변경합니다.
+            leader = 1; 
         }
-
-        if (a_ && a_arr[i] < b_arr[i])
+        else if(a_arr[i] < b_arr[i])
         {
-            cnt++;
-            a_ = !a_;
-            b_ = !b_;
-        }
-        else if (b_ && a_arr[i] > b_arr[i])
-        {
-            cnt++;
-            a_ = !a_;
-            b_ = !b_;
+            // 기존 리더가 A였다면
+            // 답을 갱신합니다.
+            if(leader == 1)
+                ans++;
+            
+            // 리더를 B로 변경합니다.
+            leader = 2; 
         }
     }
-    cout << cnt;
+    
+    cout << ans;
+    return 0;
 }
