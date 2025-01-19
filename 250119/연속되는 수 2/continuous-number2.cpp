@@ -20,6 +20,6 @@ int main() {
         else cnt = 1;
         if (cnt_m < cnt) cnt_m = cnt;
     }
-    cout << cnt;
+    cout << cnt_m;
     return 0;
 }
