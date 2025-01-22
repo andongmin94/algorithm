@@ -4,13 +4,23 @@ using namespace std;
 
 int n, m;
 int arr[10];
-bool used[10];
+bool isused[10];
+void func(int k);
 
-void back_tracking(int t)
+int main()
 {
-    if (t == m)
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    cin >> n >> m;
+    func(0);
+}
+
+void func(int k)
+{
+    if (k == m)
     {
-        for (int i = 0; i < m; i++)
+        for (int i = 0; i < k; i++)
             cout << arr[i] << ' ';
         cout << '\n';
         return;
@@ -18,23 +28,12 @@ void back_tracking(int t)
 
     for (int i = 1; i <= n; i++)
     {
-        if (!used[i])
+        if (!isused[i])
         {
-            arr[t] = i;
-            used[i] = true;
-            back_tracking(t+1);
-            used[i] = false;
+            arr[k] = i;
+            isused[i] = 1;
+            func(k + 1);
+            isused[i] = 0;
         }
     }
-}
-
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    n, m;
-    cin >> n >> m;
-
-    back_tracking(0);
 }
