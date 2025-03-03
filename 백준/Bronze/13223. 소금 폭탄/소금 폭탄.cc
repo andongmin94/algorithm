@@ -21,10 +21,6 @@ int main()
     string m = sum % 3600 / 60 < 10 ? "0" + to_string(sum % 3600 / 60) : to_string(sum % 3600 / 60);
     string s = sum % 3600 % 60 < 10 ? "0" + to_string(sum % 60) : to_string(sum % 60);
 
-    if (sum == 0) {
-        cout << "24:00:00";
-    } else {
-        cout << h << ':' << m << ':' << s;
-    }
+    if (sum == 0) cout << "24:00:00";
+    else cout << h << ':' << m << ':' << s;
 }
- 
