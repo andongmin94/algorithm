@@ -18,8 +18,8 @@ int main() {
     cout << '\n';
     if (a == b) cout << 1;
     else cout << 0;
+    cout << '\n';
     if (a != b) cout << 1;
     else cout << 0;
-    cout << '\n';
     return 0;
 }
