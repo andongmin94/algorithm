@@ -12,8 +12,9 @@ int main()
     vector<int> v;
     while (cnt <= n)
     {
-        if (n % cnt == 0) v.push_back(cnt++);
-        else cnt++;
+        if (n % cnt == 0) v.push_back(cnt);
+
+        cnt++;
     }
     cnt = 0;
     for (auto e : v)
