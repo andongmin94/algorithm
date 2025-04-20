@@ -11,16 +11,9 @@ int main()
     bool turn = true;
     while (a < 5 && b < 5)
     {
-        if (turn)
-        {
-            b += a;
-            turn = !turn;
-        }
-        else
-        {
-            a += b;
-            turn = !turn;
-        }
+        if (turn) b += a;
+        else a += b;
+        turn = !turn;
     }
     if (a < b) cout << "yt";
     else cout << "yj";
