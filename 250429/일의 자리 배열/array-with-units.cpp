@@ -6,7 +6,7 @@ int main() {
 
     int t = 8;
     int a, b; cin >> a >> b;
-    cout << a << b << ' ';
+    cout << a << ' ' << b << ' ';
     while(t--)
     {
         int temp = (a + b) % 10;
