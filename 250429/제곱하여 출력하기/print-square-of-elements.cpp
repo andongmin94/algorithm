@@ -7,7 +7,7 @@ int main() {
     while(n--)
     {
         int a; cin >> a;
-        cout << pow(a, a) << ' ';
+        cout << (int)(a * a) << ' ';
     }
     return 0;
 }
