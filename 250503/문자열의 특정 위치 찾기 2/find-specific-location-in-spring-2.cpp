@@ -13,8 +13,8 @@ int main() {
     int cnt = 0;
     for (auto e : v)
     {
-        if (e[3] == c || e[4] == c) cout << e << '\n';
-        if (e[3] == c || e[4] == c) cnt++;
+        if (e[2] == c || e[3] == c) cout << e << '\n';
+        if (e[2] == c || e[3] == c) cnt++;
     }
     cout << cnt;
     return 0;
