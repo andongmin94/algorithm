@@ -6,8 +6,8 @@ int main() {
     while(true)
     {
         int n; cin >> n;
-        cout << n << '\n';
         if (!n) break;
+        cout << n << '\n';
     }
     return 0;
 }
