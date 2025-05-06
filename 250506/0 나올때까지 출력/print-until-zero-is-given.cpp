@@ -9,6 +9,5 @@ int main() {
         cout << n << '\n';
         if (!n) break;
     }
-    cout << 0;
     return 0;
 }
