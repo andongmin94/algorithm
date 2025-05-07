@@ -10,7 +10,7 @@ int main() {
         for (int j = 0; j < 4; j++)
         {
             cin >> arr[i][j];
-            if (i <= j) cnt += arr[i][j];
+            if (i >= j) cnt += arr[i][j];
         }
     }
     cout << cnt;
